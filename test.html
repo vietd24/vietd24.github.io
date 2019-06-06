@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script src="vendor/aframe/build/aframe.min.js"></script>
+
+  <!-- include ar.js for aframe -->
+  <script src="../build/aframe-ar.js"></script>
+  <script>ARjs.Context.baseURL = '../../three.js/'</script>
+  
+  <!-- start the body of your page -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all" /></head><body style="margin: -170.5px 0px 0px; overflow: hidden; width: 1920px; height: 1440px;" class="">
+    <!-- add some info at the top of the page -->
+    <div style="position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;">
+      <a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - tango example for a-frame by <a href="https://twitter.com/jerome_etienne" target="_blank">@jerome_etienne</a>
+    </div>
+  
+    <!-- Define your 3d scene and enabled ar.js -->
+    <a-scene arjs="trackingMethod: best;" class="fullscreen" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" aframe-inspector-removed-embedded="undefined">
+  
+      <!-- Create a anchor to attach your augmented reality -->
+      <a-anchor hit-testing-enabled="true" material="" arjs-anchor="">
+  
+        <!-- Add your augmented reality here -->
+        <a-box position="0 0.5 0" material="opacity:0.5;side:double;color:red" geometry="">
+          <a-torus-knot radius="0.26" radius-tubular="0.05" rotation="104.344 0 0" material="" geometry="">
+            <a-animation attribute="rotation" to="360 0 0" dur="5000" easing="linear" repeat="indefinite"></a-animation>
+          </a-torus-knot>
+        </a-box>
+  
+      </a-anchor>
+  
+      <!-- Define a static camera -->
+      <a-camera-static material="" camera="">
+  
+    </a-camera-static></a-scene>
+  
+  <div id="arjsDebugUIContainer" style="position: fixed; bottom: 10px; width:100%; text-align: center; z-index: 1;color: grey;"><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>trackingBackend</b> : artoolkit</span><a href="https://webxr.io/augmented-website?https://jeromeetienne.github.io/AR.js/aframe/examples/basic.html" style="display: block;">Share on augmented-websites</a></div><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>markersAreaEnabled</b> :true</span><button id="buttonToggleMarkerHelpers" style="display: block;">toggle-marker-helper</button><button id="buttonMarkersAreaLearner" style="display: block;">Learn-new-marker-area</button><button id="buttonMarkersAreaReset" style="display: block;">Reset-marker-area</button></div></div><video autoplay="" muted="" playsinline="" style="width: 1920px; height: 1440px; position: absolute; top: 0px; left: 0px; z-index: -2; margin-left: 0px; margin-top: -170.5px;"></video></body></html>

@@ -15,11 +15,11 @@
   <a-scene embedded arjs="trackingMethod: best; sourceWidth:1280; sourceHeight:720; displayWidth: 1280; displayHeight: 720; debugUIEnabled: true" class="fullscreen">
     <a-marker preset="hiro" smooth="true">
 
-      <a-image src="shield.png" geometry="width:3;height:3" rotation="-15 0 0" position="0 1.5 -1.7" material="" smooth="true" animation="dir: alternate; property: rotation; from: -15 10 0; to: -15 -10 0; loop:true; dur:1250; easing: easeInOutSine"></a-image>
-      <a-gltf-model src="Mozart_Control_Module.gltf" rotation="0 90 8.5" scale="8 8 8" smooth="true" gltf-model="Mozart_Control_Module.gltf"></a-gltf-model>
+      <a-image src="shield.png" geometry="width:3;height:3" rotation="-15 0 0" position="0 1.5 -1.7" material="" animation="dir: alternate; property: rotation; from: -15 10 0; to: -15 -10 0; loop:true; dur:1250; easing: easeInOutSine"></a-image>
+      <a-gltf-model src="Mozart_Control_Module.gltf" rotation="0 90 8.5" scale="8 8 8" gltf-model="Mozart_Control_Module.gltf"></a-gltf-model>
 
     </a-marker>
-    <a-camera-static/>
+    <a-entity camera></a-entity>
 
   </a-scene>
   <div id="marker-recognize" style="position: absolute; top:15px; left:15px;">------------</div>

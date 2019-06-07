@@ -13,7 +13,7 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden; font-family: Montserrat, sans-serif;'>
-  <a-scene arjs="trackingMethod: best; sourceWidth:1280; sourceHeight:720; displayWidth: 1280; displayHeight: 720; debugUIEnabled: false" class="fullscreen">
+  <a-scene arjs="trackingMethod: best; debugUIEnabled: false" class="fullscreen">
     <a-marker preset="hiro" smooth="true">
 
       <a-image src="shield.png" geometry="width:3;height:3" rotation="-15 0 0" position="0 1.5 -1.7" material="" animation="dir: alternate; property: rotation; from: -15 10 0; to: -15 -10 0; loop:true; dur:1250; easing: easeInOutSine"></a-image>

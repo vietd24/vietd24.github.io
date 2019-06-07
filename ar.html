@@ -12,15 +12,31 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded arjs="trackingMethod: best; sourceWidth:1280; sourceHeight:720; displayWidth: 1280; displayHeight: 720;" class="fullscreen">
-    <a-marker-camera preset="hiro" smooth="true">
+  <a-scene embedded arjs="trackingMethod: best; sourceWidth:1280; sourceHeight:720; displayWidth: 1280; displayHeight: 720; debugUIEnabled: true" class="fullscreen">
+    <a-marker preset="hiro" smooth="true">
 
       <a-image src="shield.png" geometry="width:3;height:3" rotation="-15 0 0" position="0 1.5 -1.7" material="" smooth="true" animation="dir: alternate; property: rotation; from: -15 10 0; to: -15 -10 0; loop:true; dur:1250; easing: easeInOutSine"></a-image>
       <a-gltf-model src="Mozart_Control_Module.gltf" rotation="0 90 8.5" scale="8 8 8" smooth="true" gltf-model="Mozart_Control_Module.gltf"></a-gltf-model>
 
-      </a-marker-camera>
+    </a-marker>
+    <a-camera-static/>
 
   </a-scene>
-  
+  <div id="marker-recognize" style="position: absolute; top:15px; left:15px;">------------</div>
 </body>
+
+<script>
+  let marker = document.querySelector("a-marker");
+  let text = document.getElementById("marker-recognize")
+  marker.addEventListener("markerFound", (e)=>{
+  console.log("found");
+  text.innerHTML = "found";
+  })
+
+  marker.addEventListener("markerLost", (e)=>{
+  console.log("lost")
+  text.innerHTML = "lost";
+  })
+</script>
+
 </html>
